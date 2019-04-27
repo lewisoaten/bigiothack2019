@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Bike Maps</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="This sample shows how to create a heat map that uses clustering on the data source to improve performance for large data sets. " />
+    <meta name="keywords" content="map, gis, API, SDK, heatmap, heat map, heatmaps, heat maps, density, layer, thermatic, clustering, superclusterer" />
+    <meta name="author" content="Microsoft Azure Maps" />
+
+    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+
+    <script type='text/javascript'>
+        var map, datasource;
+        function GetMap() {
+            //Initialize a map instance.
+            map = new atlas.Map('myMap', {
+                center: [-1.0813, 51.2690],
+                zoom: 12.5,
+                style: 'grayscale_dark', 
+                //Add your Azure Maps subscription key to the map SDK. Get an Azure Maps key at https://azure.com/maps
+                authOptions: {
+                    authType: 'subscriptionKey',
+                    subscriptionKey: 'quIKonFyQ4RbSFz0J6J316_6IMLXtgcRercYd6QWMuI'
+                }
+            });
+            //Wait until the map resources are ready.
+            map.events.add('ready', function () {
+                //Create a data source and add it to the map.
+                datasource = new atlas.source.DataSource(null, {
+                    //Tell the data source to cluster point data.
+                    cluster: true,
+                    //The radius in pixels to cluster points together.
+                    clusterRadius: 15
+                });
+                map.sources.add(datasource);
+                //Create a heatmap and add it to the map.
+                map.layers.add(new atlas.layer.HeatMapLayer(datasource, null, {
+                    //Set the weight to the point_count property of the data points.
+                    weight: ['get', 'point_count'],
+                    //Optionally adjust the radius of each heat point.
+                    radius: 20
+                }), 'labels');
+                //Load a data set of points, in this case earthquake data from the USGS.
+                datasource.importDataFromUrl('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson');
+            });
+        }
+    </script>
+</head>
+<body onload="GetMap()">
+    <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+
+    <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
+        <legend>Bike Usage and Crash Data Map</legend>
+       This layered map shows the data derived form the community bikes that are used through the city, showing the main thorough fairs of traffic on bicycles and 
+       as well as the crash data from the community bicycles highlighting hotspots of potential danger.
+       Click on the button in the top corner to transition between the layers.
+    </fieldset>
+</body>
+</html>
