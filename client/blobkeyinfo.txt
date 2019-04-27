@@ -1,0 +1,2 @@
+blob storage url: https://iothackstorage2019.blob.core.windows.net/bikelocations
+key: kFJJLfOKazLPj+rD+Zr8If8BEK/dROzS/ei0tO4naFWNQyrXUDJ0HKAYZSPgPbfR+kU+dpZBMCO2xwE1t89f4Q==
