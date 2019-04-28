@@ -92,7 +92,10 @@
                 });
                 map.sources.add(alert_datasource);
                 //Create a heatmap and add it to the map.
-                alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null);
+                alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null, {
+                    iconOptions: {
+                        image: 'pin-red'
+                    }});
 
                 map.layers.add(alertLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
