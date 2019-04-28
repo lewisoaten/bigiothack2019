@@ -1,3 +1,0 @@
-[submodule "third-party/pycom-libraries"]
-	path = third-party/pycom-libraries
-	url = git@github.com:pycom/pycom-libraries.git

@@ -14,7 +14,7 @@
     <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
     <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="/client/assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
 
@@ -55,7 +55,7 @@
 
                 map.layers.add(travelLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
-                travel_datasource.importDataFromUrl('./testData.geojson');
+                travel_datasource.importDataFromUrl('testData.geojson');
 
                 crash_datasource = new atlas.source.DataSource(null, {
                     //Tell the data source to cluster point data.
@@ -142,7 +142,7 @@
                 Click on the button in the top corner to transition between the layers.
             </p>
             <div class="row no_margin">
-                <a class="no_dec col-md-2" href="/client/index.html">Return to Homepage</a>
+                <a class="no_dec col-md-2" href="index.html">Return to Homepage</a>
             </div>
         </div>
 </body>
