@@ -22,17 +22,6 @@
         var map, travel_datasource, crash_datasource;
         var travelLayer, crashLayer;
 
-        function getCrashInputOptions() {
-            return {
-                visible: getPropertyValue('visible', document.getElementById('VisibleCrash').checked)
-            };
-        }
-        
-        function updateCrashLayer() {
-            var options = getCrashInputOptions();
-            crashLayer.setOptions(options);
-        }
-
         function GetMap() {
             //Initialize a map instance.
             map = new atlas.Map('myMap', {
@@ -111,12 +100,17 @@
                 //Load a data set of points, in this case earthquake data from the USGS.
                 alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
             });
-            updateCrashLayer();
+            getCrashInputOptions();
         }
 
         function updateTravelLayer() {
             var options = getTravelInputOptions();
             travelLayer.setOptions(options);
+        }
+
+        function updateCrashLayer() {
+            var options = getCrashInputOptions();
+            crashLayer.setOptions(options);
         }
 
         function getTravelInputOptions() {
@@ -125,6 +119,11 @@
             };
         }
 
+        function getCrashInputOptions() {
+            return {
+                visible: getPropertyValue('visible', document.getElementById('VisibleCrash').checked)
+            };
+        }
 
         function getPropertyValue(propertyName, value) {
             return value;
@@ -150,7 +149,7 @@
             </div>
             <div class="col-md-offset-1 col-md-3 " title="Specifies if the layer is visible or not.">
                 <p>Crash Layer Visible:
-                    <input id="VisibleCrash" type="checkbox" onclick="updateCrashLayer()" value="0" />
+                    <input id="VisibleCrash" type="checkbox" onclick="updateCrashLayer()" value="1" />
                 </p>
             </div>
         </div>
