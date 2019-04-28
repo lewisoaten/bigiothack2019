@@ -27,6 +27,11 @@
                 visible: getPropertyValue('visible', document.getElementById('VisibleCrash').checked)
             };
         }
+        
+        function updateCrashLayer() {
+            var options = getCrashInputOptions();
+            crashLayer.setOptions(options);
+        }
 
         function GetMap() {
             //Initialize a map instance.
@@ -106,17 +111,12 @@
                 //Load a data set of points, in this case earthquake data from the USGS.
                 alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
             });
-            getCrashInputOptions();
+            updateCrashLayer();
         }
 
         function updateTravelLayer() {
             var options = getTravelInputOptions();
             travelLayer.setOptions(options);
-        }
-
-        function updateCrashLayer() {
-            var options = getCrashInputOptions();
-            crashLayer.setOptions(options);
         }
 
         function getTravelInputOptions() {
