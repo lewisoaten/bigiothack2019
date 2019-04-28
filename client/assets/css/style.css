@@ -1,0 +1,43 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+/*-----------------------------Index Page ----*/
+
+.container {
+    display: flex;
+}
+
+.bike_image {
+    background: url("/client/assets/images/bicycleimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.headline {
+    display: inline-grid;
+    background-color: transparent;
+    position: absolute;
+    top: 182px;
+}
+
+/*------------------------------Maps Page-------*/
+
+legend {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 30px;
+}

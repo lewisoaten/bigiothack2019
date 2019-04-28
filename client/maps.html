@@ -13,6 +13,9 @@
 
     <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
     <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/client/assets/css/style.css" type="text/css" />
+
     <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
 
     <script type='text/javascript'>
@@ -112,12 +115,12 @@
 </head>
 
 <body onload="GetMap()">
+    <legend>Bike Usage and Crash Data Map</legend>
     <div>
         <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
     </div>
 
     <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
-        <legend>Bike Usage and Crash Data Map</legend>
         <tr title="Specifies if the layer is visible or not.">
             <td>Travel Layer Visible:</td>
             <td><input id="VisibleTravel" type="checkbox" onclick="updateTravelLayer()" checked="checked" /></td>
