@@ -44,7 +44,8 @@
                 //Create a heatmap and add it to the map.
                 alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null, {
                     iconOptions: {
-                        image: 'pin-red'
+                        image: 'pin-red',
+                        allowOverlap: true
                     }});
 
                 map.layers.add(alertLayer, 'labels');
