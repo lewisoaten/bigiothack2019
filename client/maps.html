@@ -36,6 +36,21 @@
             });
             //Wait until the map resources are ready.
             map.events.add('ready', function() {
+                alert_datasource = new atlas.source.DataSource(null, {
+                    //Tell the data source to cluster point data.
+                    cluster: false
+                });
+                map.sources.add(alert_datasource);
+                //Create a heatmap and add it to the map.
+                alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null, {
+                    iconOptions: {
+                        image: 'pin-red'
+                    }});
+
+                map.layers.add(alertLayer, 'labels');
+                //Load a data set of points, in this case earthquake data from the USGS.
+                alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
+
                 //Create a data source and add it to the map.
                 travel_datasource = new atlas.source.DataSource(null, {
                     //Tell the data source to cluster point data.
@@ -83,23 +98,6 @@
                 map.layers.add(crashLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
                 crash_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashgeojson");
-
-                alert_datasource = new atlas.source.DataSource(null, {
-                    //Tell the data source to cluster point data.
-                    cluster: false,
-                    //The radius in pixels to cluster points together.
-                    clusterRadius: 15
-                });
-                map.sources.add(alert_datasource);
-                //Create a heatmap and add it to the map.
-                alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null, {
-                    iconOptions: {
-                        image: 'pin-red'
-                    }});
-
-                map.layers.add(alertLayer, 'labels');
-                //Load a data set of points, in this case earthquake data from the USGS.
-                alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
             });
         }
 
