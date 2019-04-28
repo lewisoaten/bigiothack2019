@@ -36,7 +36,7 @@
             });
             //Wait until the map resources are ready.
             map.events.add('ready', function() {
-                //Create a data source and add it to the map.
+               //Create a data source and add it to the map.
                 travel_datasource = new atlas.source.DataSource(null, {
                     //Tell the data source to cluster point data.
                     cluster: true,
@@ -86,20 +86,19 @@
 
                 alert_datasource = new atlas.source.DataSource(null, {
                     //Tell the data source to cluster point data.
-                    cluster: false,
-                    //The radius in pixels to cluster points together.
-                    clusterRadius: 15
+                    cluster: false
                 });
                 map.sources.add(alert_datasource);
                 //Create a heatmap and add it to the map.
                 alertLayer = new atlas.layer.SymbolLayer(alert_datasource, null, {
                     iconOptions: {
-                        image: 'pin-red'
+                        image: 'pin-red',
+                        allowOverlap: true
                     }});
 
                 map.layers.add(alertLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
-                alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashgeojson");
+                alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
             });
         }
 
