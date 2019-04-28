@@ -22,6 +22,12 @@
         var map, travel_datasource, crash_datasource;
         var travelLayer, crashLayer;
 
+        function getCrashInputOptions() {
+            return {
+                visible: getPropertyValue('visible', document.getElementById('VisibleCrash').checked)
+            };
+        }
+
         function GetMap() {
             //Initialize a map instance.
             map = new atlas.Map('myMap', {
@@ -100,6 +106,7 @@
                 //Load a data set of points, in this case earthquake data from the USGS.
                 alert_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashalerts");
             });
+            getCrashInputOptions();
         }
 
         function updateTravelLayer() {
@@ -118,11 +125,6 @@
             };
         }
 
-        function getCrashInputOptions() {
-            return {
-                visible: getPropertyValue('hidden', document.getElementById('VisibleCrash').checked)
-            };
-        }
 
         function getPropertyValue(propertyName, value) {
             return value;
