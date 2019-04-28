@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+.no-dec{
+    text-decoration: none;
+}
+
 /*-----------------------------Index Page ----*/
 
 .container {
