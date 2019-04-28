@@ -115,26 +115,36 @@
 </head>
 
 <body onload="GetMap()">
-    <legend>Bike Usage and Crash Data Map</legend>
-    
-    <div>
-        <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+    <div class="header">
+        <h2>Bike Usage and Crash Data Map</h2>
     </div>
 
-    <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
-        <tr title="Specifies if the layer is visible or not.">
-            <td>Travel Layer Visible:</td>
-            <td><input id="VisibleTravel" type="checkbox" onclick="updateTravelLayer()" checked="checked" /></td>
-        </tr>
-        <tr title="Specifies if the layer is visible or not.">
-            <td>Crash Layer Visible:</td>
-            <td><input id="VisibleCrash" type="checkbox" onclick="updateCrashLayer()" checked="checked" /></td>
-        </tr>
-        <p>
-            This layered map shows the data derived form the community bikes that are used through the city, showing the main thorough fairs of traffic on bicycles and as well as the crash data from the community bicycles highlighting hotspots of potential danger.
-            Click on the button in the top corner to transition between the layers.
-        </p><a class="no_dec" href="/client/index.html">Return to Homepage</a>
-    </fieldset>
+    <div>
+        <div id="myMap" class="map_margin" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3" title="Specifies if the layer is visible or not.">
+                <p>Travel Layer Visible:
+                    <input id="VisibleTravel" type="checkbox" onclick="updateTravelLayer()" checked="checked" />
+                </p>
+            </div>
+            <div class="col-md-offset-1 col-md-3 " title="Specifies if the layer is visible or not.">
+                <p>Crash Layer Visible:
+                    <input id="VisibleCrash" type="checkbox" onclick="updateCrashLayer()" checked="checked" />
+                </p>
+            </div>
+        </div>
+        <div class="row map_info">
+            <p class="col-md-12">
+                This layered map shows the data derived form the community bikes that are used through the city, showing the main thorough fairs of traffic on bicycles and as well as the crash data from the community bicycles highlighting hotspots of potential danger.
+                Click on the button in the top corner to transition between the layers.
+            </p>
+            <div class="row no_margin">
+                <a class="no_dec col-md-2" href="/client/index.html">Return to Homepage</a>
+            </div>
+        </div>
 </body>
 
 </html>

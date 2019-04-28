@@ -8,7 +8,11 @@ body {
     padding: 0;
     margin: 0;
 }
-
+.row {
+    margin-left:0;
+    margin-right:0;
+    padding:0;
+}
 .no-dec{
     text-decoration: none;
 }
@@ -39,9 +43,18 @@ body {
 
 /*------------------------------Maps Page-------*/
 
-legend {
+.header {
     display: flex;
     justify-content: center;
-    margin: 20px;
-    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    line-height: inherit;
+    color: #333;
+}
+.map_margin{
+    margin-bottom: 5px;
+}
+.map_info{
+    text-align: center;
 }
