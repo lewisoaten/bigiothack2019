@@ -92,9 +92,10 @@ if 'pybytes' in globals().keys():
             global last_alert_time
             if (time.time() - last_alert_time) > 60:  # 60 seconds since last alert
                 x, y, z = accel.acceleration()
+                lat, lon = gnss.coordinates()
                 print("Crash detected! ({x}, {y}, {z}): {}".format(arg, x=x, y=y, z=z))
 
-                pybytes.send_signal(10, 1)
+                pybytes.send_signal(11, [lat, lon])
                 last_alert_time = time.time()
             else:
                 print("Crash bounce protection activated. Last alert: {}, time now: {}".format(last_alert_time, time.time()))
@@ -109,7 +110,7 @@ if 'pybytes' in globals().keys():
                 # can be none
                 pybytes.send_signal(8, [x, y, z])
                 pybytes.send_signal(9, [lat, lon])
-                time.sleep(10)
+                time.sleep(60)
 
         # Start your thread
         _thread.start_new_thread(send_env_data, ())
