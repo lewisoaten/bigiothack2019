@@ -55,7 +55,7 @@
 
                 map.layers.add(travelLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
-                travel_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/HttpTrigger1?code=hCgGeytnjdT0FwwkbIjGqR/XOq0C0hMSVuKPjHCDjUEjOc6kzk6rcA==");
+                travel_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/locationgeojson");
 
                 crash_datasource = new atlas.source.DataSource(null, {
                     //Tell the data source to cluster point data.
@@ -82,7 +82,7 @@
 
                 map.layers.add(crashLayer, 'labels');
                 //Load a data set of points, in this case earthquake data from the USGS.
-                crash_datasource.importDataFromUrl('./testData1.geojson');
+                crash_datasource.importDataFromUrl("https://bikelocation.azurewebsites.net/api/crashgeojson");
             });
         }
 
