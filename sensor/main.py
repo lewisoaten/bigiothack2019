@@ -95,7 +95,9 @@ if 'pybytes' in globals().keys():
                 lat, lon = gnss.coordinates()
                 print("Crash detected! ({x}, {y}, {z}): {}".format(arg, x=x, y=y, z=z))
 
-                pybytes.send_signal(11, [lat, lon])
+                if lat is not None and lon is not None:
+                    pybytes.send_signal(11, [lat, lon])
+                # pybytes.send_signal(11, [51.26849, -1.072273])
                 last_alert_time = time.time()
             else:
                 print("Crash bounce protection activated. Last alert: {}, time now: {}".format(last_alert_time, time.time()))
@@ -108,8 +110,11 @@ if 'pybytes' in globals().keys():
                 x, y, z = accel.acceleration()
                 lat, lon = gnss.coordinates()
                 # can be none
-                pybytes.send_signal(8, [x, y, z])
-                pybytes.send_signal(9, [lat, lon])
+                if x is not None and y is not None and z is not None:
+                    pybytes.send_signal(8, [x, y, z])
+
+                if lat is not None and lon is not None:
+                    pybytes.send_signal(9, [lat, lon])
                 time.sleep(60)
 
         # Start your thread
