@@ -65,31 +65,32 @@ body {
 }
 
 /*-------------------------------------------Media Queries------------*/
+
 @media(min-width: 320px) and (max-width: 439px) {
-    .bike_image{
-        background-position-x: -427px;
+    .bike_image {
+        background-position-x: -320px;
     }
     .headline {
-        top: 190px;
+        top: 150px;
         left: -7px;
     }
     .title {
-        font-size: 30px;
+        font-size: 20px;
     }
     .title_message {
-        font-size: 18px;
+        font-size: 14px;
     }
     .title_link {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 @media(min-width: 440px) and (max-width: 589px) {
-    .bike_image{
-        background-position-x: -445px;
+    .bike_image {
+        background-position-x: -220px;
     }
     .headline {
-        top: 190px;
+        top: 155px;
         left: 0px;
     }
     .title {
@@ -103,35 +104,54 @@ body {
     }
 }
 
-@media(min-width: 590px) and (max-width: 779px) {
-    .bike_image{
+@media(min-width: 590px) and (max-width: 710px) {
+    .bike_image {
         background-position-x: center;
     }
     .headline {
-        top: 218px;
-        left: 0px;
+        top: 170px;
+        left: 40px;
     }
     .title {
-        font-size: 30px;
+        font-size: 25px;
     }
     .title_message {
-        font-size: 18px;
+        font-size: 16px;
     }
     .title_link {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 711px) and (max-width: 779px) {
+    .bike_image {
+        background-position-x: center;
+    }
+    .headline {
+        top: 160px;
+        left: 70px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .title_message {
         font-size: 16px;
+    }
+    .title_link {
+        font-size: 14px;
     }
 }
 
 @media(min-width: 780px) and (max-width: 900px) {
-    .bike_image{
+    .bike_image {
         background-position-x: center;
     }
     .headline {
-        top: 250px;
-        left: 310px;
+        top: 170px;
+        left: 120px;
     }
     .title {
-        font-size: 30px;
+        font-size: 25px;
     }
     .title_message {
         font-size: 18px;
@@ -141,23 +161,85 @@ body {
     }
 }
 
-@media(min-width: 991px) and (max-width: 1469px) {
+@media(min-width: 901px) and (max-width: 990px) {
+    .bike_image {
+        background-position-x: center;
+    }
     .headline {
-        top: 300px;
-        left: 240px;
+        top: 170px;
+        left: 170px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .title_message {
+        font-size: 18px;
+    }
+    .title_link {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 991px) and (max-width: 1200px) {
+    .headline {
+        top: 220px;
+        left: 160px;
+    }
+     .title {
+        font-size: 25px;
+    }
+    .title_message {
+        font-size: 18px;
+    }
+    .title_link {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 1201px) and (max-width: 1469px) {
+    .headline {
+        top: 290px;
+        left: 200px;
+    }
+     .title {
+        font-size: 40px;
+    }
+    .title_message {
+        font-size: 30px;
+    }
+    .title_link {
+        font-size: 22px;
     }
 }
 
 @media(min-width: 1470px) and (max-width: 1999px) {
     .headline {
-        top: 300px;
-        left: 240px;
+        top: 280px;
+        left: 40px;
+    }
+     .title {
+        font-size: 40px;
+    }
+    .title_message {
+        font-size: 30px;
+    }
+    .title_link {
+        font-size: 22px;
     }
 }
 
 @media(min-width: 2000px) and (max-width: 2800px) {
     .headline {
-        top: 400px;
-        left: 340px;
+        top: 330px;
+        left: 60px;
+    }
+     .title {
+        font-size: 50px;
+    }
+    .title_message {
+        font-size: 35px;
+    }
+    .title_link {
+        font-size: 26px;
     }
 }
