@@ -212,7 +212,7 @@ body {
     }
 }
 
-@media(min-width: 1470px) and (max-width: 1999px) {
+@media(min-width: 1470px) and (max-width: 1899px) {
     .headline {
         top: 225px;
         left: 50px;
@@ -228,7 +228,7 @@ body {
     }
 }
 
-@media(min-width: 2000px) and (max-width: 2800px) {
+@media(min-width: 1900px) and (max-width: 2800px) {
     .headline {
         top: 400px;
         left: 150px;
