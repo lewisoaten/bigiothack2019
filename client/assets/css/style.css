@@ -228,7 +228,23 @@ body {
     }
 }
 
-@media(min-width: 1900px) and (max-width: 2800px) {
+@media(min-width: 1900px) and (max-width: 2099px) {
+    .headline {
+        top: 300px;
+        left: 50px;
+    }
+     .title {
+        font-size: 40px;
+    }
+    .title_message {
+        font-size: 30px;
+    }
+    .title_link {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 2100px) and (max-width: 2800px) {
     .headline {
         top: 400px;
         left: 150px;
