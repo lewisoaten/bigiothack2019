@@ -8,12 +8,14 @@ body {
     padding: 0;
     margin: 0;
 }
+
 .row {
-    margin-left:0;
-    margin-right:0;
-    padding:0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
 }
-.no-dec{
+
+.no-dec {
     text-decoration: none;
 }
 
@@ -39,7 +41,7 @@ body {
     background-color: transparent;
     position: absolute;
     top: 300px;
-    left:150px;
+    left: 150px;
 }
 
 /*------------------------------Maps Page-------*/
@@ -53,9 +55,109 @@ body {
     line-height: inherit;
     color: #333;
 }
-.map_margin{
+
+.map_margin {
     margin-bottom: 5px;
 }
-.map_info{
+
+.map_info {
     text-align: center;
+}
+
+/*-------------------------------------------Media Queries------------*/
+@media(min-width: 320px) and (max-width: 439px) {
+    .bike_image{
+        background-position-x: -427px;
+    }
+    .headline {
+        top: 190px;
+        left: -7px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .title_message {
+        font-size: 18px;
+    }
+    .title_link {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 440px) and (max-width: 589px) {
+    .bike_image{
+        background-position-x: -445px;
+    }
+    .headline {
+        top: 190px;
+        left: 0px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .title_message {
+        font-size: 16px;
+    }
+    .title_link {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 590px) and (max-width: 779px) {
+    .bike_image{
+        background-position-x: center;
+    }
+    .headline {
+        top: 218px;
+        left: 0px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .title_message {
+        font-size: 18px;
+    }
+    .title_link {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 780px) and (max-width: 900px) {
+    .bike_image{
+        background-position-x: center;
+    }
+    .headline {
+        top: 250px;
+        left: 310px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .title_message {
+        font-size: 18px;
+    }
+    .title_link {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 991px) and (max-width: 1469px) {
+    .headline {
+        top: 300px;
+        left: 240px;
+    }
+}
+
+@media(min-width: 1470px) and (max-width: 1999px) {
+    .headline {
+        top: 300px;
+        left: 240px;
+    }
+}
+
+@media(min-width: 2000px) and (max-width: 2800px) {
+    .headline {
+        top: 400px;
+        left: 340px;
+    }
 }
