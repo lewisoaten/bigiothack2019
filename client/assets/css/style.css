@@ -215,7 +215,7 @@ body {
 @media(min-width: 1470px) and (max-width: 1999px) {
     .headline {
         top: 225px;
-        left: 70px;
+        left: 50px;
     }
      .title {
         font-size: 40px;
