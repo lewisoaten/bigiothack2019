@@ -68,10 +68,10 @@ body {
 
 @media(min-width: 320px) and (max-width: 439px) {
     .bike_image {
-        background-position-x: -320px;
+        background-position-x: -530px;
     }
     .headline {
-        top: 150px;
+        top: 175px;
         left: -7px;
     }
     .title {
@@ -87,10 +87,10 @@ body {
 
 @media(min-width: 440px) and (max-width: 589px) {
     .bike_image {
-        background-position-x: -220px;
+        background-position-x: -475px;
     }
     .headline {
-        top: 155px;
+        top: 190px;
         left: 0px;
     }
     .title {
@@ -109,7 +109,7 @@ body {
         background-position-x: center;
     }
     .headline {
-        top: 170px;
+        top: 190px;
         left: 40px;
     }
     .title {
@@ -128,7 +128,7 @@ body {
         background-position-x: center;
     }
     .headline {
-        top: 160px;
+        top: 210px;
         left: 70px;
     }
     .title {
@@ -202,19 +202,19 @@ body {
         left: 200px;
     }
      .title {
-        font-size: 40px;
+        font-size: 36px;
     }
     .title_message {
-        font-size: 30px;
+        font-size: 24px;
     }
     .title_link {
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
 @media(min-width: 1470px) and (max-width: 1999px) {
     .headline {
-        top: 280px;
+        top: 250px;
         left: 40px;
     }
      .title {
@@ -230,8 +230,8 @@ body {
 
 @media(min-width: 2000px) and (max-width: 2800px) {
     .headline {
-        top: 330px;
-        left: 60px;
+        top: 400px;
+        left: 150px;
     }
      .title {
         font-size: 50px;
