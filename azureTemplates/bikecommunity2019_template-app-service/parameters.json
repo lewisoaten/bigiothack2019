@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_bikecommunity2019_name": {
+            "value": null
+        },
+        "serverfarms_ServicePlan2332c5d5_95ba_externalid": {
+            "value": null
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "accounts_bikesheatmapping270419_name": {
+            "defaultValue": "bikesheatmapping270419",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Maps/accounts",
+            "apiVersion": "2018-05-01",
+            "name": "[parameters('accounts_bikesheatmapping270419_name')]",
+            "location": "global",
+            "sku": {
+                "name": "s1",
+                "tier": "Standard"
+            },
+            "properties": {
+                "x-ms-client-id": "a126ef0d-811e-456c-9831-c328bdd0821c"
+            }
+        }
+    ]
+}
